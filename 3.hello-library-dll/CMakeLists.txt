@@ -1,0 +1,25 @@
+cmake_minimum_required(VERSION 3.17)
+
+include (GenerateExportHeader)
+
+project(HelloLibraryDll CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_INSTALL_PREFIX ${CMAKE_BINARY_DIR}/install)
+
+add_library(HelloLibraryDll SHARED
+  include/HelloLibraryDll/hello.h
+  src/hello.cpp
+)
+
+generate_export_header(HelloLibraryDll)
+
+target_include_directories(HelloLibraryDll
+  PUBLIC
+    include
+    ${CMAKE_CURRENT_BINARY_DIR}
+)
+
+install(TARGETS HelloLibraryDll)
+
+add_subdirectory(example)
