@@ -1,11 +1,12 @@
 cmake_minimum_required(VERSION 3.17)
 
 set(CMAKE_CXX_STANDARD 17)
+
 set(CMAKE_INSTALL_PREFIX ${CMAKE_BINARY_DIR}/install)
 
-include (GenerateExportHeader)
+include(GenerateExportHeader)
 
-project(HelloLibraryDll CXX)
+project(Hello CXX)
 
 add_library(HelloLibraryDll SHARED
   include/HelloLibraryDll/hello.h

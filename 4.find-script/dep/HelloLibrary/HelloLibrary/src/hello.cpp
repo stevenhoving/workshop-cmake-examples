@@ -1,5 +1,4 @@
-#include "HelloLibrary/hello.h"
-#include <iostream>
+#include "HelloLibraryDll/hello.h"
 
 namespace HelloLibrary
 {

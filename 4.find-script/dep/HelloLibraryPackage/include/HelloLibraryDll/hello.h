@@ -1,6 +1,7 @@
 #pragma once
 
 #include "hellolibrarydll_export.h"
+#include <iostream>
 
 namespace HelloLibrary
 {
