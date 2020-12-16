@@ -1,9 +1,15 @@
 cmake_minimum_required(VERSION 3.17)
 
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+
+if (NOT CMAKE_INSTALL_PREFIX)
+  set(CMAKE_INSTALL_PREFIX "${CMAKE_BINARY_DIR}/install")
+endif()
+
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_INSTALL_PREFIX ${CMAKE_BINARY_DIR}/install)
 
 include (GenerateExportHeader)
+include (RunClangTidy)
 
 project(HelloLibraryDll CXX)
 
