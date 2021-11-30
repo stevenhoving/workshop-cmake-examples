@@ -24,3 +24,5 @@ target_include_directories(HelloLibraryDll
 install(TARGETS HelloLibraryDll)
 
 add_subdirectory(example)
+
+# For additional info on "packagable libraries", please see https://www.youtube.com/watch?v=_5weX5mx8hc

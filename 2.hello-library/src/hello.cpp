@@ -11,6 +11,7 @@ Hello::Hello()
 
 Hello::~Hello()
 {
+    // please notice that I don't use `std::endl;`
     std::cout << "world\n";
 }
 

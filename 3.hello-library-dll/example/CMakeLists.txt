@@ -1,7 +1,5 @@
 project(Example)
 
-set(CMAKE_CXX_STANDARD 11)
-
 add_executable(Example
     main.cpp
 )
@@ -9,6 +7,11 @@ add_executable(Example
 target_link_libraries(Example
   PUBLIC
     HelloLibraryDll
+)
+
+target_compile_features(Example
+  PUBLIC
+    cxx_std_11
 )
 
 install(TARGETS Example)
